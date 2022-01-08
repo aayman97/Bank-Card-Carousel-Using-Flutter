@@ -88,7 +88,7 @@ class _HomePage2State extends State<HomePage2> {
                         
                         child: Stack(
                         children: [
-                          BankCards(cards[index]!.image),
+                          BankCards(cards[index]!.image,size),
                           Container(
                             padding: EdgeInsets.all(30),
                             child: Row(
@@ -314,9 +314,9 @@ class _HomePage2State extends State<HomePage2> {
                                 );
   }
 
-  Container BankCards(String pathoftheimage) {
+  Container BankCards(String pathoftheimage,Size size) {
     return Container(
-      height: 440,
+      height: size.height*0.7,
         margin: const EdgeInsets.symmetric(
         horizontal: Constants.padding,
       ),
